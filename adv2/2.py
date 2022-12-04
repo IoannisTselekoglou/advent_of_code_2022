@@ -42,8 +42,7 @@ def p2(f):
             summe += L[a][2] + 6
 
         a = "ABC".index(a)
-        print(a%3)
-    #return print(summe)
+    return print(summe)
 
 #p1(input_file)
 p2(input_file)
