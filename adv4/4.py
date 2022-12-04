@@ -3,7 +3,7 @@ import csv
 x = lambda a : int(a)
 
 def input():
-    csvfile = open("input.txt", "r")
+    csvfile = open("input.csv", "r")
     reader = csv.reader(csvfile, delimiter=",")
     return reader
 
