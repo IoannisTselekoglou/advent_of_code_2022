@@ -1,27 +1,31 @@
 import csv
 
 
-y = 0
-results = []
-with open("input1.csv") as csvfile:
-    reader = csv.reader(csvfile)
-    for i in reader:
-        try:
-            y += int(i[0])
-        except:
-            results.append(y)
-            y = 0
+f = open("input.txt")
 
-#results.sort(reverse=True)
 
-results.sort()
+def p1(f):
+  y = 0
+  results = []
+  for i in f:
+    try:
+      y += int(i)
+    except:
+      results.append(y)
+      y = 0
+  return results
 
-y = results[::-1]
+#print(max(p1(f)))
 
-y_2 = 0
-for i in range(3):
-    y_2 += y[i]
-print(y_2)
+def p2(f):
+  y = 0
+  int_t = p1(f)
+  int_t.sort(reverse=True)
+  for i in range(3):
+    y += int_t[i]
+  return y
+
+print(p2(f))
 
 
 
